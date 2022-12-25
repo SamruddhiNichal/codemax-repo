@@ -1,0 +1,20 @@
+<h1>VEHICLE DETAILS</h1>
+
+
+<h5>Vehicle Type : {{ vehicle.typeOfVehicle }}</h5>
+<h6>Year Of Manufactured : {{ vehicle.YearOfManufactured }}</h6>
+<h6>Vehicle Price : {{ vehicle.price }}</h6>
+
+<table>
+  <th>company</th>
+  <th>insPrice</th>
+  <th>discount %</th>
+
+  <tbody *ngFor="let insurance of vehicle.insurance">
+    <tr>
+      <td class="p-2">{{ insurance.company }}</td>
+      <td class="p-2">{{ insurance.insPrice }}</td>
+      <td class="p-2">{{ insurance.discount }}</td>
+    </tr>
+  </tbody>
+</table>
